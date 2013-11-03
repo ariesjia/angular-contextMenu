@@ -4,7 +4,6 @@ angular.module('angularContextMenuApp', ['angular-contextMenu'])
     .controller('MainCtrl', function ($scope) {
 
         $scope.testMenuOption = {
-            selector : '.context-menu-one',
             callback: function (key, options) {
                 var m = "clicked: " + key;
                 window.console && console.log(m) || alert(m);
@@ -19,5 +18,21 @@ angular.module('angularContextMenuApp', ['angular-contextMenu'])
                 "quit": {name: "Quit", icon: "quit"}
             }
         };
+
+        $scope.testMenuOption2 = {
+            callback: function (key, options) {
+                var m = "clicked: " + key;
+                window.console && console.log(m) || alert(m);
+            },
+            items: {
+                "copy": {name: "Copy", icon: "copy"},
+                "sep1": "---------",
+                "paste": {name: "Paste", icon: "paste"},
+                "delete": {name: "Delete", icon: "delete"},
+                "sep2": "---------",
+                "quit": {name: "Quit", icon: "quit"}
+            }
+        };
+
 
     });

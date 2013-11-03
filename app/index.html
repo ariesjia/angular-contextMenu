@@ -25,10 +25,19 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <!-- Add your site or application content here -->
+
     <div class="container" ng-controller="MainCtrl" >
         <div class="context-menu-one box" context-menu="testMenuOption">
             <strong>right click me</strong>
         </div>
+
+
+        <div context-menu="testMenuOption2" context-menu-selector="'.context-menu-two'">
+            <div class="context-menu-two box" >
+                <strong>right click me</strong>
+            </div>
+        </div>
+
     </div>
 
     <!-- build:js({.tmp,app}) scripts/lib.js -->
