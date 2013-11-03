@@ -14,7 +14,7 @@ angular.module('angular-contextMenu', [])
     })
     .directive('contextMenu', [ "$timeout","contextMenuService", function ($timeout,contextMenuService) {
         return {
-            restrict: 'EA',
+            restrict: 'A',
             compile:function(element, attrs){
 
                 var hasSelector = attrs.contextMenuSelector,
